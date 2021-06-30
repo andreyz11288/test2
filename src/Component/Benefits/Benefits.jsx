@@ -4,14 +4,14 @@ import './Benefits.scss'
 import ContentsOneText from './ContentsOneText'
 import ContentsTwoText from './ContentsTwoText'
 import ContentsThreeText from './ContentsThreeText'
-import Future from "../Future/Future";
-import Future2 from "../Future2/Future2";
-import Future3 from "../Future3/Future3";
+import Future from '../Future/Future'
+import Future2 from '../Future2/Future2'
+import Future3 from '../Future3/Future3'
+import Slider from '../Slider/Slider'
 import { useState } from 'react'
 
 export default function Benefits() {
   const [state, setstate] = useState('one')
-
 
   const one = document.getElementById('one')
   const two = document.getElementById('two')
@@ -35,61 +35,67 @@ export default function Benefits() {
     three.classList.add('benefitsLinkActive')
   }
 
-  return (<main>
-    <section className={s.benefitsSection}>
-      <h1>Bringing the benefits of multiple assays into one</h1>
-      <p>
-        Helix’s Exome+® assay has been carefully optimized to provide the
-        benefits of lcWGS, whole exome sequencing, microarrays, and targeted
-        panels — all in one assay.
-      </p>
-      <ul className={s.benefitsLink}>
-        <li>
-          <Link
-            className="benefitsLinkLi benefitsLinkActive"
-            id="one"
-            to=""
-            onClick={() => {
-              setstate('one')
-            }}
-          >
-            Targeted Panels
-          </Link>
-        </li>
-        <li>
-          <Link
-            className="benefitsLinkLi"
-            id="two"
-            to=""
-            onClick={() => {
-              setstate('two')
-            }}
-          >
-            Whole Exome Sequencing
-          </Link>
-        </li>
-        <li>
-          <Link
-            className="benefitsLinkLi"
-            id="three"
-            to=""
-            onClick={() => {
-              setstate('three')
-            }}
-          >
-            lcWGS and Microarrays
-          </Link>
-        </li>
-      </ul>
-      <div className={s.benefitsContents}>
-        {state === 'one' && <ContentsOneText />}
-        {state === 'two' && <ContentsTwoText />}
-        {state === 'three' && <ContentsThreeText />}
-      </div>
-    </section>
-    {state === 'one' && <Future />}
-    {state === 'two' && <Future2 />}
-    {state === 'three' && <Future3 />}
-  </main>
+  return (
+    <main>
+      <section className={s.benefitsSection}>
+        <h1>Bringing the benefits of multiple assays into one</h1>
+        <p>
+          Helix’s Exome+® assay has been carefully optimized to provide the
+          benefits of lcWGS, whole exome sequencing, microarrays, and targeted
+          panels — all in one assay.
+        </p>
+        <div className={s.mobileNone}>
+          <Slider />
+        </div>
+        <div className={s.desktopNone}>
+          <ul className={s.benefitsLink}>
+            <li>
+              <Link
+                className="benefitsLinkLi benefitsLinkActive"
+                id="one"
+                to=""
+                onClick={() => {
+                  setstate('one')
+                }}
+              >
+                Targeted Panels
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="benefitsLinkLi"
+                id="two"
+                to=""
+                onClick={() => {
+                  setstate('two')
+                }}
+              >
+                Whole Exome Sequencing
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="benefitsLinkLi"
+                id="three"
+                to=""
+                onClick={() => {
+                  setstate('three')
+                }}
+              >
+                lcWGS and Microarrays
+              </Link>
+            </li>
+          </ul>
+          <div className={s.benefitsContents}>
+            {state === 'one' && <ContentsOneText />}
+            {state === 'two' && <ContentsTwoText />}
+            {state === 'three' && <ContentsThreeText />}
+          </div>
+        </div>
+      </section>
+      {state === 'one' && <Future />}
+      {state === 'two' && <Future2 />}
+      {state === 'three' && <Future3 />}
+    </main>
   )
 }

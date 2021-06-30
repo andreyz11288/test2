@@ -1,8 +1,8 @@
-.futureSection>h2{
-    padding-top: 61px;
-    text-align: center;
-    margin: 0;
-      font-family: TTNorms;
+.futureSection > h2 {
+  padding-top: 61px;
+  text-align: center;
+  margin: 0;
+  font-family: TTNorms;
   font-size: 34px;
   font-weight: 700;
   font-stretch: normal;
@@ -13,12 +13,12 @@
   color: #363636;
 }
 
-.futureSection>p{
-    max-width: 600px;
-    height: 86px;
-    text-align: center;
-    margin: 30px auto 0 auto;
-      font-family: TTNorms;
+.futureSection > p {
+  max-width: 600px;
+  height: 86px;
+  text-align: center;
+  margin: 30px auto 0 auto;
+  font-family: TTNorms;
   font-size: 16px;
   font-weight: 400;
   font-stretch: normal;
@@ -28,17 +28,29 @@
   text-align: center;
   color: #383838;
 }
-.futureContainer{
-    display: flex;
-    max-width: 940px;
-    margin: 49px auto 0 auto;
-    justify-content: space-between;
+.futureContainer {
+  display: flex;
+  max-width: 940px;
+  margin: 49px auto 0 auto;
+  justify-content: space-between;
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    margin: 0 auto;
+    max-width: 680px;
+  }
+  @media screen and (max-width: 767px) {
+    position: relative;
+    display: block;
+  }
 }
-.futureContainerText{
-    max-width: 372px;
+.futureContainerText {
+  max-width: 372px;
+  @media screen and (max-width: 767px) {
+    max-width: 312px;
+    margin: 0 auto;
+  }
 }
-.futureContainerText>p{
-      font-family: TTNorms;
+.futureContainerText > p {
+  font-family: TTNorms;
   font-size: 16px;
   font-weight: normal;
   font-stretch: normal;
@@ -46,7 +58,21 @@
   line-height: 1.63;
   letter-spacing: normal;
   color: #383838;
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    top: 350px;
+  }
 }
-.futureContainer> img{
-    max-width: 467px;
+.futureContainer > img {
+  max-width: 467px;
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    max-width: 380px;
+  }
+  @media screen and (max-width: 767px) {
+    margin: 0 auto;
+    display: block;
+    max-width: 295px;
+    max-height: 295px;
+    box-shadow: 0 0 28px 6px rgba(216, 216, 216, 0.5);
+  }
 }

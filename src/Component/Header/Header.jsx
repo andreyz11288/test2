@@ -2,6 +2,7 @@ import s from './Header.module.scss'
 import logo from '../../Image/logo.png'
 import cart from '../../Image/cart-icon.svg'
 import { Link } from 'react-router-dom'
+import Modal from '../Modal/Modal'
 
 export default function Header() {
   return (
@@ -17,9 +18,13 @@ export default function Header() {
         </div>
         <nav className={s.headerNav}>
           <div className={s.headerNavDiv}>
-            <a href="/">
+            <Modal />
+            <a href="/" className={s.headerLogoLink}>
               <img src={logo} className={s.headerLogo} alt="logo" height="25" />
             </a>
+            <Link className={s.headerNavLinkMobile} to="/">
+              <img src={cart} alt="cart" />
+            </Link>
             <ul className={s.headerLink}>
               <li>
                 <Link className={s.headerNavLink} to="/">

@@ -1,20 +1,12 @@
-@font-face {
-  font-display: swap;
-  font-family: 'TTNorms';
-  font-weight: 500;
-  src: url('https://fonts.hlxcdn.com/fonts/tt-norms/TTNorms-Medium.woff');
+.desktopNone {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 }
-@font-face {
-  font-display: swap;
-  font-family: 'TTNorms';
-  font-weight: 400;
-  src: url('https://fonts.hlxcdn.com/fonts/tt-norms/TTNorms-Regular.woff');
-}
-@font-face {
-  font-display: swap;
-  font-family: 'TTNorms';
-  font-weight: 700;
-  src: url('https://fonts.hlxcdn.com/fonts/tt-norms/TTNorms-Bold.woff');
+.mobileNone {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 .benefitsSection {
   margin-top: 100px;
@@ -33,6 +25,9 @@
     line-height: 1.18;
     letter-spacing: normal;
     color: #363636;
+    @media screen and (max-width: 767px) {
+      font-size: 28px;
+    }
   }
   & > p {
     margin-top: 9px;
@@ -47,14 +42,27 @@
     line-height: 1.63;
     letter-spacing: normal;
     color: #383838;
+    @media screen and (max-width: 767px) {
+      margin-top: 20px;
+      font-size: 16px;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    max-height: 800px;
   }
 }
+
 .benefitsLink {
   display: flex;
   max-width: 710px;
   justify-content: space-between;
   margin: 0 auto;
   margin-top: 59px;
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    padding: 0;
+    max-width: 650px;
+    margin-top: 30px;
+  }
   & a {
     font-family: TTNorms;
     font-size: 20px;
@@ -74,10 +82,9 @@
   height: 607px;
   background-color: #ffffff;
   margin: 38px auto 0 auto;
-  & img {
-    display: block;
-    max-width: 415px;
-    padding: 63px 0 0 140px;
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    max-width: 700px;
+    max-height: 475px;
   }
 }
 a {
@@ -86,12 +93,51 @@ a {
 .benefitsContentsOne {
   display: flex;
   padding-left: 65px;
+
   & > div {
     padding-top: 62px;
+    max-width: 368px;
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+      max-width: 270px;
+    }
+    @media screen and (max-width: 767px) {
+      max-width: 253px;
+      margin: 0 auto;
+    }
+    & > h2 {
+      @media screen and (max-width: 767px) {
+        white-space: pre;
+      }
+    }
+  }
+  & > img {
+    display: block;
+    max-width: 415px;
+    padding: 63px 0 0 140px;
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+      max-width: 315px;
+      max-height: 315px;
+      padding: 63px 0 0 40px;
+    }
+    @media screen and (max-width: 767px) {
+      max-width: 250px;
+      max-height: 250px;
+      padding: 63px 0 0 0;
+      margin: 0 auto;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    padding-left: 0;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+  @media screen and (max-width: 767px) {
+    position: relative;
+    display: block;
+    padding-left: 0;
   }
 }
 .benefitsContentsOneText {
-  max-width: 368px;
   font-family: TTNorms;
   font-size: 16px;
   font-weight: 400;
@@ -101,4 +147,10 @@ a {
   letter-spacing: normal;
   color: #4e4e4e;
   word-wrap: break-word;
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    top: 401px;
+    right: 0;
+    left: 0;
+  }
 }
