@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom'
 
 export default function Header() {
   return (
-    <section className={s.headerSection}>
-      <header className={s.header}>
+    <header className={s.headerSection}>
+      <section className={s.header}>
         <div className={s.announcement}>
           <p>
             We’ve updated our policies. {''}
@@ -49,7 +49,7 @@ export default function Header() {
             </ul>
           </div>
         </nav>
-      </header>
-    </section>
+      </section>
+    </header>
   )
 }

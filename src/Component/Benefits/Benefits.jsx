@@ -4,12 +4,38 @@ import './Benefits.scss'
 import ContentsOneText from './ContentsOneText'
 import ContentsTwoText from './ContentsTwoText'
 import ContentsThreeText from './ContentsThreeText'
+import Future from "../Future/Future";
+import Future2 from "../Future2/Future2";
+import Future3 from "../Future3/Future3";
 import { useState } from 'react'
 
 export default function Benefits() {
   const [state, setstate] = useState('one')
 
-  return (
+
+  const one = document.getElementById('one')
+  const two = document.getElementById('two')
+  const three = document.getElementById('three')
+
+  if (state === 'one' && one) {
+    one.classList.add('benefitsLinkActive')
+    two.classList.remove('benefitsLinkActive')
+    three.classList.remove('benefitsLinkActive')
+  }
+
+  if (state === 'two' && two) {
+    one.classList.remove('benefitsLinkActive')
+    two.classList.add('benefitsLinkActive')
+    three.classList.remove('benefitsLinkActive')
+  }
+
+  if (state === 'three' && three) {
+    one.classList.remove('benefitsLinkActive')
+    two.classList.remove('benefitsLinkActive')
+    three.classList.add('benefitsLinkActive')
+  }
+
+  return (<main>
     <section className={s.benefitsSection}>
       <h1>Bringing the benefits of multiple assays into one</h1>
       <p>
@@ -20,17 +46,11 @@ export default function Benefits() {
       <ul className={s.benefitsLink}>
         <li>
           <Link
-            className="benefitsLinkLi"
+            className="benefitsLinkLi benefitsLinkActive"
             id="one"
             to=""
             onClick={() => {
               setstate('one')
-              const one = document.getElementById('one')
-              const two = document.getElementById('two')
-              const three = document.getElementById('three')
-              one.classList.add('benefitsLinkActive')
-              two.classList.remove('benefitsLinkActive')
-              three.classList.remove('benefitsLinkActive')
             }}
           >
             Targeted Panels
@@ -43,12 +63,6 @@ export default function Benefits() {
             to=""
             onClick={() => {
               setstate('two')
-              const one = document.getElementById('one')
-              const two = document.getElementById('two')
-              const three = document.getElementById('three')
-              one.classList.remove('benefitsLinkActive')
-              two.classList.add('benefitsLinkActive')
-              three.classList.remove('benefitsLinkActive')
             }}
           >
             Whole Exome Sequencing
@@ -61,12 +75,6 @@ export default function Benefits() {
             to=""
             onClick={() => {
               setstate('three')
-              const one = document.getElementById('one')
-              const two = document.getElementById('two')
-              const three = document.getElementById('three')
-              one.classList.remove('benefitsLinkActive')
-              two.classList.remove('benefitsLinkActive')
-              three.classList.add('benefitsLinkActive')
             }}
           >
             lcWGS and Microarrays
@@ -79,5 +87,9 @@ export default function Benefits() {
         {state === 'three' && <ContentsThreeText />}
       </div>
     </section>
+    {state === 'one' && <Future />}
+    {state === 'two' && <Future2 />}
+    {state === 'three' && <Future3 />}
+  </main>
   )
 }
