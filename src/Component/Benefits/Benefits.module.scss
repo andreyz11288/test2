@@ -1,0 +1,104 @@
+@font-face {
+  font-display: swap;
+  font-family: 'TTNorms';
+  font-weight: 500;
+  src: url('https://fonts.hlxcdn.com/fonts/tt-norms/TTNorms-Medium.woff');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'TTNorms';
+  font-weight: 400;
+  src: url('https://fonts.hlxcdn.com/fonts/tt-norms/TTNorms-Regular.woff');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'TTNorms';
+  font-weight: 700;
+  src: url('https://fonts.hlxcdn.com/fonts/tt-norms/TTNorms-Bold.woff');
+}
+.benefitsSection {
+  margin-top: 100px;
+  height: 1003px;
+  background-color: #f4f4f4;
+  & h1 {
+    padding-top: 61px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: TTNorms;
+    font-size: 34px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.18;
+    letter-spacing: normal;
+    color: #363636;
+  }
+  & > p {
+    margin-top: 9px;
+    max-width: 623px;
+    text-align: center;
+    margin: 0 auto;
+    font-family: TTNorms;
+    font-size: 16px;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.63;
+    letter-spacing: normal;
+    color: #383838;
+  }
+}
+.benefitsLink {
+  display: flex;
+  max-width: 710px;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 59px;
+  & a {
+    font-family: TTNorms;
+    font-size: 20px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-align: center;
+  }
+}
+.benefitsLinkActive {
+  color: #4b94c6;
+}
+.benefitsContents {
+  max-width: 1062px;
+  height: 607px;
+  background-color: #ffffff;
+  margin: 38px auto 0 auto;
+  & img {
+    display: block;
+    max-width: 415px;
+    padding: 63px 0 0 140px;
+  }
+}
+a {
+  text-decoration: none;
+}
+.benefitsContentsOne {
+  display: flex;
+  padding-left: 65px;
+  & > div {
+    padding-top: 62px;
+  }
+}
+.benefitsContentsOneText {
+  max-width: 368px;
+  font-family: TTNorms;
+  font-size: 16px;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.63;
+  letter-spacing: normal;
+  color: #4e4e4e;
+  word-wrap: break-word;
+}

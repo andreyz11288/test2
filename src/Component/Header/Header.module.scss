@@ -1,0 +1,81 @@
+@font-face {
+  font-display: swap;
+  font-family: 'TTNorms';
+  font-weight: 400;
+  src: url('https://fonts.hlxcdn.com/fonts/tt-norms/TTNorms-Regular.woff');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'TTNorms';
+  font-weight: 700;
+  src: url('https://fonts.hlxcdn.com/fonts/tt-norms/TTNorms-Bold.woff');
+}
+.headerSection {
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+.announcement {
+  background-color: #a0c5db;
+  width: 100%;
+  height: 37px;
+  text-align: center;
+  display: table;
+}
+.announcement p {
+  display: table-cell;
+  vertical-align: middle;
+  color: #ffffff;
+  font-family: TTNorms;
+  font-size: 14px;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+.headerAnnouncementLink {
+  color: #ffffff;
+  font-family: TTNorms;
+  font-size: 14px;
+  font-weight: 700;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+.headerNav {
+  background-color: #ffffff;
+}
+.headerNavDiv {
+  display: flex;
+  height: 63px;
+  max-width: 932px;
+  margin: 0 auto;
+  & a {
+    display: contents;
+  }
+}
+.headerLink {
+  display: flex;
+  width: 450px;
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  justify-content: space-between;
+  padding: 0;
+}
+.headerLogo {
+  margin: auto 0;
+}
+.headerNavLink {
+  text-decoration: none;
+  color: #383838;
+  font-family: TTNorms;
+  font-size: 16px;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.63;
+  letter-spacing: normal;
+}
