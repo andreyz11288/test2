@@ -119,20 +119,22 @@ export default function Benefits() {
         </div>
       </section>
       <div className="container">
+        <h2>A future proofed assay</h2>
+            <p>There are several advantages to running panels in the presence of a whole exome, including flexible test design, flexible re-testing, and increased functionality.</p>
         <div className='containerTabs1 '>
-          <div id='tabsLink1' className='tabsLink1' onClick={() => { setTabs('tabs') }} > <h2>Flexible test design</h2>
+          <div  className='tabsLink1' onClick={() => { setTabs('tabs') }} > <h2>Flexible test design</h2>
           <img src={copy} alt='copy'/></div>
-           <div className='contentTabs1 activeTabs'><Future /></div>
+           <div id='tabsLink1' className='contentTabs1 activeTabs'><Future /></div>
         </div>
         <div className='containerTabs2'>
-          <div id='tabsLink2' className='tabsLink2' onClick={() => {setTabs('tabs2')}}><h2>Sequence once, query often</h2>
+          <div  className='tabsLink2' onClick={() => {setTabs('tabs2')}}><h2>Sequence once, query often</h2>
           <img src={copy} alt='copy' /></div>
-         <div className='contentTabs2'> <Future2 /></div>
+         <div id='tabsLink2' className='contentTabs2'> <Future2 /></div>
         </div>
         <div className='containerTabs3'>
-          <div id='tabsLink3' className='tabsLink3' onClick={() => { setTabs('tabs3') }}><h2>Comprehensive PGx</h2>
+          <div  className='tabsLink3' onClick={() => { setTabs('tabs3') }}><h2>Comprehensive PGx</h2>
           <img src={copy} alt='copy' /></div>
-         <div className='contentTabs3'> <Future3 /></div>
+         <div id='tabsLink3' className='contentTabs3'> <Future3 /></div>
         </div>
 
   </div>
