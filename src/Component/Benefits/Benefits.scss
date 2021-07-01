@@ -5,3 +5,23 @@
 .benefitsLinkActive {
   color: #4b94c6;
 }
+// .containerTabs1,
+// .containerTabs2,
+// .containerTabs3 {
+//   display: none;
+// }
+.tabsLink1,
+.tabsLink2,
+.tabsLink3 {
+  display: flex;
+  cursor: pointer;
+}
+.contentTabs1,
+.contentTabs2,
+.contentTabs3 {
+  display: none;
+}
+
+.activeTabs {
+  display: block;
+}

@@ -9,9 +9,11 @@ import Future2 from '../Future2/Future2'
 import Future3 from '../Future3/Future3'
 import Slider from '../Slider/Slider'
 import { useState } from 'react'
+import copy from "../../Image/copy.svg";
 
 export default function Benefits() {
   const [state, setstate] = useState('one')
+  const [tabs, setTabs] = useState('tabs')
 
   const one = document.getElementById('one')
   const two = document.getElementById('two')
@@ -33,6 +35,29 @@ export default function Benefits() {
     one.classList.remove('benefitsLinkActive')
     two.classList.remove('benefitsLinkActive')
     three.classList.add('benefitsLinkActive')
+  }
+
+  const tabs1 = document.getElementById('tabsLink1')
+  const tabs2 = document.getElementById('tabsLink2')
+  const tabs3 = document.getElementById('tabsLink3')
+  console.log(tabs);
+
+  if (tabs === 'tabs' && tabs1) {
+    tabs1.classList.add('activeTabs')
+    tabs2.classList.remove('activeTabs')
+    tabs3.classList.remove('activeTabs')
+  }
+
+  if (tabs === 'tabs2' && tabs2 ) {
+    tabs1.classList.remove('activeTabs')
+    tabs2.classList.add('activeTabs')
+    tabs3.classList.remove('activeTabs')
+  }
+
+  if (tabs === 'tabs3' && tabs3) {
+    tabs1.classList.remove('activeTabs')
+    tabs2.classList.remove('activeTabs')
+    tabs3.classList.add('activeTabs')
   }
 
   return (
@@ -93,9 +118,27 @@ export default function Benefits() {
           </div>
         </div>
       </section>
-      {state === 'one' && <Future />}
+      <div className="container">
+        <div className='containerTabs1 '>
+          <div id='tabsLink1' className='tabsLink1' onClick={() => { setTabs('tabs') }} > <h2>Flexible test design</h2>
+          <img src={copy} alt='copy'/></div>
+           <div className='contentTabs1 activeTabs'><Future /></div>
+        </div>
+        <div className='containerTabs2'>
+          <div id='tabsLink2' className='tabsLink2' onClick={() => {setTabs('tabs2')}}><h2>Sequence once, query often</h2>
+          <img src={copy} alt='copy' /></div>
+         <div className='contentTabs2'> <Future2 /></div>
+        </div>
+        <div className='containerTabs3'>
+          <div id='tabsLink3' className='tabsLink3' onClick={() => { setTabs('tabs3') }}><h2>Comprehensive PGx</h2>
+          <img src={copy} alt='copy' /></div>
+         <div className='contentTabs3'> <Future3 /></div>
+        </div>
+
+  </div>
+      {/* {state === 'one' && <Future />}
       {state === 'two' && <Future2 />}
-      {state === 'three' && <Future3 />}
+      {state === 'three' && <Future3 />} */}
     </main>
   )
 }
