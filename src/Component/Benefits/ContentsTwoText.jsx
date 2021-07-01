@@ -1,8 +1,17 @@
 import s from './Benefits.module.scss'
 import Oval2 from '../../Image/Oval2.png'
+import { animated } from 'react-spring';
+import { Transition } from '../Transition/Transition';
 
 export default function ContentsTwoText() {
-  return (
+
+      const transitions = Transition();
+
+
+  return transitions(
+          (styles, item) =>
+            item && (
+              <animated.div style={styles}>
     <div className={s.benefitsContentsOne}>
       <div>
         <h2>Whole Exome Sequencing</h2>
@@ -19,6 +28,7 @@ export default function ContentsTwoText() {
         </p>
       </div>
       <img src={Oval2} alt="Oval2" />
-    </div>
-  )
+          </div>
+          </animated.div>))
+  
 }

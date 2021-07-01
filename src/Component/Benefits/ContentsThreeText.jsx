@@ -1,8 +1,17 @@
 import s from './Benefits.module.scss'
 import Oval3 from '../../Image/Oval3.png'
+import { animated } from 'react-spring';
+import { Transition } from '../Transition/Transition';
 
 export default function ContentsThreeText() {
-  return (
+
+    const transitions = Transition();
+
+
+  return transitions(
+          (styles, item) =>
+            item && (
+              <animated.div style={styles}>
     <div className={s.benefitsContentsOne}>
       <div>
         <h2>lcWGS and Microarrays</h2>
@@ -20,5 +29,5 @@ export default function ContentsThreeText() {
       </div>
       <img src={Oval3} alt="Oval3" />
     </div>
-  )
+  </animated.div>))
 }

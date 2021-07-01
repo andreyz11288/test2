@@ -1,8 +1,16 @@
 import s from './Benefits.module.scss'
 import Oval from '../../Image/Oval.png'
+import { animated } from 'react-spring';
+import { Transition } from '../Transition/Transition';
 
 export default function ContentsOneText() {
-  return (
+
+    const transitions = Transition();
+
+  return transitions(
+          (styles, item) =>
+            item && (
+              <animated.div style={styles}>
     <div className={s.benefitsContentsOne}>
       <div>
         <h2>Targeted Panels</h2>
@@ -19,6 +27,7 @@ export default function ContentsOneText() {
         </p>
       </div>
       <img src={Oval} alt="Oval" />
-    </div>
-  )
+          </div>
+          </animated.div>))
+  
 }
