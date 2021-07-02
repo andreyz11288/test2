@@ -145,11 +145,7 @@ export default function Benefits() {
         </div>
         <div  className='img3'><img src={img3} alt='img3' /></div>
         </div></div>
-
   </div>
-      {/* {state === 'one' && <Future />}
-      {state === 'two' && <Future2 />}
-      {state === 'three' && <Future3 />} */}
     </main>
   )
 }
