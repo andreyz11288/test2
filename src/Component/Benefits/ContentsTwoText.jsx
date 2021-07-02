@@ -14,7 +14,7 @@ export default function ContentsTwoText() {
               <animated.div style={styles}>
     <div className={s.benefitsContentsOne}>
       <div>
-        <h2>Whole Exome <br/> Sequencing</h2>
+        <h2>Whole Exome Sequencing</h2>
         <p className={s.benefitsContentsOneText}>
           Panels are often used in clinical settings because they’re low cost
           and provide high quality coverage of specific, pre-defined genomic
