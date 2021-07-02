@@ -4,11 +4,11 @@
   margin: 49px auto 0 auto;
   justify-content: space-between;
   @media screen and (min-width: 768px) and (max-width: 1200px) {
-    margin: 0 auto;
-    max-width: 680px;
+    margin: 0;
+    max-width: 320px;
   }
   @media screen and (max-width: 767px) {
-    position: relative;
+    // position: relative;
     display: block;
   }
 }
@@ -29,20 +29,21 @@
   letter-spacing: normal;
   color: #383838;
   @media screen and (max-width: 767px) {
-    position: absolute;
+    // position: absolute;
     top: 350px;
   }
 }
 .futureContainer > img {
   max-width: 467px;
-  @media screen and (min-width: 768px) and (max-width: 1200px) {
-    max-width: 380px;
-  }
-  @media screen and (max-width: 767px) {
-    margin: 0 auto;
-    display: block;
-    max-width: 295px;
-    max-height: 295px;
-    box-shadow: 0 0 28px 6px rgba(216, 216, 216, 0.5);
+
+  margin: 0 auto 30px;
+  display: block;
+  max-width: 295px;
+  max-height: 295px;
+  box-shadow: 0 0 28px 6px rgba(216, 216, 216, 0.5);
+}
+.img {
+  @media screen and (min-width: 768px) {
+    display: none;
   }
 }
